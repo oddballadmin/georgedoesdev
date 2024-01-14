@@ -2,9 +2,12 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
+<footer class="full-width">
+	<small>&copy; {today.getFullYear()} Your name here. All rights reserved.</small>
 	
 </footer>
-
+<style>
+	footer{
+		background-color: var(--primary-bg-color);
+	}
 </style>

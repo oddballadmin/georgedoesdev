@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import NavBar from '../components/NavBar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<div class="full-page-layout">
+		<div class="grid-content">
+				<Header title={SITE_TITLE} />
+				<NavBar />
+                <slot />
+                <Footer />
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
+<

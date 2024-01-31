@@ -3,51 +3,76 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300;400&display=swap');
+
 
 html,
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; 
     margin: 0;
-    padding: 0;min-height: 100dvh;
-    min-height: 100%;
+    padding: 0;
+    font-size: 62.5%;
+    
 }
-
+ 
 :root {
 	// Colors
-    --primary-bg-color: #090039;
-	// End Of Colors
+  --color-darkblue-bg: #121218;
+  --color-darkbluegray-bg: #27273D;
+  --color-lightbluegray-bg: #4c4c67;
+  --color-text-light: #f7f7f7;
+  --text-gradient: linear-gradient(150deg, rgba(39,39,61,1) 1%, rgba(247,247,247,1) 100%);
+  --body-gradient: linear-gradient(263deg, rgba(39,39,61,1) 32%, rgba(18,18,24,1) 100%);
+
+  
+  // End Of Colors
 
 
 
     // Fonts
-    --primary-heading-font: 'Sono', monospace;
-    --secondary-heading-font: 'system-ui', sans-serif;
+    --heading-font: 'Oswald', sans-serif;
+    --heading-fw: 600;
+    --sub-heading-fw: 300;
+    --body-font: 'Roboto', sans-serif;
+    --body-fw: 500;
+    
+
 
     // End of Fonts
 
+
+    // Font Sizes
+    --body-fs: 2.4rem;
+    --header-fs: 3.8rem;
+    --section-head-fs: 6.4rem;
+    --sub-head-fs: 4.2rem;
+    --project-title-fs: 4.8rem;
+    --small-tag-fs: 2.0rem;
+    --footer-brand: 2.8rem;
+
+    // End of Font Sizes
 
     // layout vars
     --content-size: min(100% - (var(--padding-inline) * 2),
             var(--content-max-width));
     --padding-inline: 1rem;
-    --content-max-width: 80ch;
-    --breakout-max-width: 95ch;
+    --content-max-width: 95ch;
+    --breakout-max-width: 120ch;
 
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
     // End of layout vars
 }
-
-/* // Layout container section */
-.full-page-layout {
-    display: grid;
-    min-height: 100vh; /* Ensure the grid takes at least the viewport height */
+.flow > *+*{
+margin-top: 1em;
 }
+body{
+  font-size: var(--default-body-fs);
+}
+/* // Layout container section */
+
 .grid-content,
 .full-width {
     
     display: grid;
-    grid-template-rows: auto auto 1fr auto; /* Header, Content, Footer */
 
     grid-template-columns:
         [full-width-start] minmax(var(--padding-inline), 1fr) 
@@ -57,22 +82,22 @@ html,
         [breakout-end] minmax(var(--padding-inline),
             1fr) 
         [full-width-end];
-}
 
-.grid-content>*,
-.full-width>* {
-    grid-column: content;
 }
-
-.grid-content>.breakout {
-    grid-column: breakout;
+main p{
+  font-size: var(--default-body-fs);
 }
-
-.grid-content>.full-width {
-    grid-column: full-width;
+.grid-content > *{
+  grid-column: content;
 }
-
+.grid-content > .breakout{
+  grid-column: breakout;
+}
+.grid-content > .full-width{
+  grid-column: full-width;
+}
 /* // End of Layout container section */
+
 
 .sr-only {
     border: 0;

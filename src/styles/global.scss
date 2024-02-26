@@ -3,14 +3,17 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+html{
+  font-size: 62.5%;
+  line-height: 2;
 
+}
 
 html,
 * {
     box-sizing: border-box; 
     margin: 0;
     padding: 0;
-    font-size: 62.5%;
     
 }
  
@@ -20,8 +23,9 @@ html,
   --color-darkbluegray-bg: #27273D;
   --color-lightbluegray-bg: #4c4c67;
   --color-text-light: #f7f7f7;
-  --text-gradient: linear-gradient(150deg, rgba(39,39,61,1) 1%, rgba(247,247,247,1) 100%);
-  --body-gradient: linear-gradient(263deg, rgba(39,39,61,1) 32%, rgba(18,18,24,1) 100%);
+  --text-gradient: linear-gradient(to top, rgba(39,39,61,1) 10%, rgba(247,247,247,1) 50%);
+  --body-gradient: radial-gradient(to top,rgb(39, 39, 61) 90% , rgba(1, 1, 1, 0.5) 100% );
+  
 
   
   // End Of Colors
@@ -42,30 +46,29 @@ html,
 
     // Font Sizes
     --body-fs: 2.4rem;
-    --header-fs: 3.8rem;
+    --header-fs: 1.5rem;
+
     --section-head-fs: 6.4rem;
     --sub-head-fs: 4.2rem;
     --project-title-fs: 4.8rem;
     --small-tag-fs: 2.0rem;
-    --footer-brand: 2.8rem;
+    --footer-brand-fs: 2.8rem;
+    --social-fs: 3rem;
 
     // End of Font Sizes
 
     // layout vars
     --content-size: min(100% - (var(--padding-inline) * 2),
             var(--content-max-width));
-    --padding-inline: 1rem;
-    --content-max-width: 95ch;
-    --breakout-max-width: 120ch;
-
+    --padding-inline: 1.25rem;
+    --content-max-width: 200ch;
+    --breakout-max-width: 300ch; 
     --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+    --grid-column-width: min(100% - (var(--padding-inline) * 2),calc((var(--content-max-width) / 2) - var(--padding-inline)*2 ));
     // End of layout vars
 }
 .flow > *+*{
 margin-top: 1em;
-}
-body{
-  font-size: var(--default-body-fs);
 }
 /* // Layout container section */
 
@@ -84,6 +87,13 @@ body{
         [full-width-end];
 
 }
+body{
+  height: 100vh;
+  font-size: var(--default-body-fs);
+  background: radial-gradient(circle at right bottom, #27273d , #0a0a20)
+ 
+  
+}
 main p{
   font-size: var(--default-body-fs);
 }
@@ -98,7 +108,9 @@ main p{
 }
 /* // End of Layout container section */
 
-
+.active{
+  display: flex !important;
+}
 .sr-only {
     border: 0;
     padding: 0;

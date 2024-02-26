@@ -1,12 +1,74 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+import NavBar from "./NavBar.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<header class="full-width">
-	
+<header class="full-width grid-content">
+	<div class="grid-content breakout">
+		<div class="head-content">
+			<div class="brand">
+				<h2>&ltGeorgeDoesDev /&gt</h2>
+			</div>
+			<button class="nav-toggle"><Icon name="mdi:menu" /></button>
+			<NavBar />
+		</div>
+	</div>
 </header>
 
 <style>
+	button {
+		all: unset;
+		display: flex;
+		background-color: inherit;
+	}
+	.head-content {
+		display: flex;
+		padding: 2rem 0;
+		align-items: center;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	.nav-toggle [data-icon] {
+		/* background: unset;
+		all: unset;
+		color: #fff; */
+		font-size: 3.5rem;
+	}
+	.nav-toggle [data-icon] {
+		display: none;
+		color: #fff;
+		background: transparent;
+	}
+	.brand {
+		background-image: var(--text-gradient);
+		background-clip: text;
+		color: transparent;
+		font-size: var(--header-fs);
+		font-family: var(--heading-font);
+		font-weight: var(--heading-fw);
+	}
+	@media screen and (max-width: 768px) {
+		.head-content {
+			flex-flow: row wrap;
+			gap: 2rem;
+		}
+		.brand {
+			font-size: 1.25rem;
+		}
 
+		.nav-toggle [data-icon] {
+			display: flex;
+		}
+	}
 </style>
+
+<script>
+	const navToggle = document.querySelector(".nav-toggle");
+	const nav = document.querySelector("nav");
+
+	navToggle.addEventListener("click", () => {
+		nav.classList.toggle("active");
+	});
+</script>

@@ -1,70 +1,34 @@
 ---
-
+import { Icon } from "astro-icon/components";
 ---
 
-<nav class="full-width grid-content">
-	<ul>
-		<li><a href="nav-link" class="nav-link">Home</a></li>
-		<li><a href="nav-link" class="nav-link">Blog</a></li>
-		<li><a href="nav-link" class="nav-link">Cool Projects</a></li>
-		<li><a href="nav-link" class="nav-link">About Me</a></li>
-	</ul>
+<nav>
+	<div class="nav-item"><Icon name="bxl:github" /></div>
+	<div class="nav-item"><Icon name="bxl:linkedin-square" /></div>
+	<div class="nav-item"><Icon name="bxl:twitter" /></div>
 </nav>
 <style lang="scss">
 	nav {
-		// background-color: var(--primary-bg-color);
-		background-color: var(--primary-bg-color);
-		ul {
-			display: grid;
-			gap: 4rem;
-			list-style: none;
-			justify-content: space-evenly;
-			align-self: center;
-			padding-block: 1rem;
-			li{
-				display: grid;
-				grid-template-columns: auto 1fr auto;
-				margin: 0 auto;
-				
-				.nav-link {
-
-					width: 100%;
-					height: 100%;
-					color: #fff;
-					text-align: center;
-					text-decoration: none;
-					font-family: var(--secondary-heading-font);
-					font-weight: 600;
-					
-					&::before,
-                &::after {
-                    content: '';
-                    display: none;
-                    text-align: center;
-                    color: #fff;
-                    font-size: inherit;
-                    padding-inline: .25rem;
-                }
-                
-                &:hover::before {
-                    content: '<';
-                    display: inline; // Show on hover
-                }
-                &:hover::after {
-                    content: '/>';
-                    display: inline; // Show on hover
-                }
-					&:visited {
-						color: #fff;
-					}
-					
-				}
-			}
-		}
+		display: flex;
+		flex-flow: row wrap;
+		gap: 5rem;
+		align-content: center;
+		justify-content: center;
 	}
-	@media screen and (min-width: 40em) {
-		ul{
-			grid-template-columns: repeat(4, minmax(150px, 1fr));
+	[data-icon] {
+		font-size: var(--social-fs);
+		color: var(--color-text-light);
+	}
+	@media screen and (max-width: 768px){
+		nav {
+			display: none;
+			width: 100%;
+			flex-flow: column;
+			gap: 1rem;
+		
+		}
+		.nav-item {
+			text-align: right;
 		}
 	}
 </style>

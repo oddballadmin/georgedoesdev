@@ -1,0 +1,47 @@
+---
+import HeroButtonGroup from './HeroButtonGroup.astro'
+
+---
+<section>
+    <div class="hero grid-content full-width">
+        <h2>Hello! My Name Is George Goldsmith</h2>
+        <h3>And I Am A Front End Web Developer</h3>
+        <HeroButtonGroup />
+    </div>
+</section>
+
+<style lang="scss">
+    section{
+        display: flex;
+        margin-top: 1rem;
+    }
+    .hero{
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        }
+	h2 {
+		font-size: clamp(var(--hero-min-fs), 6vw + 1rem, var(--hero-max-fs));
+		font-family: var(--heading-font);
+		font-weight: var(--heading-fw);
+		background-image: var(--text-gradient);
+		background-clip: text;
+		line-height: 1.25;
+		color: transparent;
+		text-align: center;
+	}
+	h3 {
+		font-size: clamp(
+			var(--hero-sub-min-fs),
+			2vw + 1rem,
+			var(--hero-sub-max-fs)
+		);
+
+		font-family: var(--heading-font);
+		font-weight: var(--sub-heading-fw);
+		text-align: center;
+		background-image: var(--text-gradient);
+		background-clip: text;
+		color: transparent;
+	}
+</style>

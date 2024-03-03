@@ -29,6 +29,7 @@ import { Icon } from "astro-icon/components";
 		align-items: center;
 		flex-flow: row wrap;
 		justify-content: space-between;
+		position: relative;
 	}
 	.nav-toggle [data-icon] {
 		/* background: unset;
@@ -68,7 +69,11 @@ import { Icon } from "astro-icon/components";
 	const navToggle = document.querySelector(".nav-toggle");
 	const nav = document.querySelector("nav");
 
-	navToggle.addEventListener("click", () => {
-		nav.classList.toggle("active");
-	});
+	if (navToggle) {
+		navToggle.addEventListener("click", () => {
+			if(nav){
+				nav.classList.toggle("active");
+			}
+		});
+	}
 </script>

@@ -23,7 +23,7 @@ html,
   --color-darkbluegray-bg: #27273D;
   --color-lightbluegray-bg: #4c4c67;
   --color-text-light: #f7f7f7;
-  --text-gradient: linear-gradient(to top, rgba(39,39,61,1) 10%, rgba(247,247,247,1) 50%);
+  --text-gradient: linear-gradient(to top, rgba(39,39,61,1) 2.5%, rgba(247,247,247,1) 50%);
   --body-gradient: radial-gradient(to top,rgb(39, 39, 61) 90% , rgba(1, 1, 1, 0.5) 100% );
   
 
@@ -54,7 +54,11 @@ html,
     --small-tag-fs: 2.0rem;
     --footer-brand-fs: 2.8rem;
     --social-fs: 3rem;
+    --hero-min-fs: 3.35rem;
+    --hero-max-fs: 7.4rem;
 
+    --hero-sub-min-fs: 1rem;
+    --hero-sub-max-fs: 3.5rem;
     // End of Font Sizes
 
     // layout vars
@@ -88,11 +92,13 @@ margin-top: 1em;
 
 }
 body{
-  height: 100vh;
+  min-height: 100vh;
   font-size: var(--default-body-fs);
   background: radial-gradient(circle at right bottom, #27273d , #0a0a20)
- 
   
+}
+section{
+  min-height: 75vh;
 }
 main p{
   font-size: var(--default-body-fs);

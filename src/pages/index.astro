@@ -2,7 +2,7 @@
 import { Image, Picture } from "astro:assets";
 import Layout from "../components/Layout.astro";
 import Hero from "../components/Hero.astro";
-import SectionHeader from "../utils/SectionHeader.astro";
+import SectionHeader from "../components/utils/SectionHeader.astro";
 import tempImg from "../images/rock.jpg";
 
 type alt = string;
@@ -11,8 +11,10 @@ type alt = string;
 <Layout>
 	<main>
 		<Hero />
+		<SectionHeader title="About Me" alignment="left"/>
 	</main>
 </Layout>
 <style lang="scss">
+
 	
 </style>

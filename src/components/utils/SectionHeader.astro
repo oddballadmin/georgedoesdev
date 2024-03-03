@@ -1,0 +1,51 @@
+---
+interface Props {
+    title: string;
+    alignment: string;
+}
+const {title, alignment} = Astro.props;
+console.log(title, alignment);
+
+---
+
+<div class="sect-head grid-content ">
+    <div class=`wrap` style=`justify-content:${alignment};`>
+        <h2>{title}</h2>
+    </div>
+</div>
+
+
+<style lang="scss">
+    .wrap {
+        display: flex;
+        padding: 0 2rem;
+        h2{
+            display: flex;
+            color: var(--color-text-light);
+    		font-size: clamp(var(--hero-sub-min-fs), 6vw + 1rem, var(--hero-sub-max-fs));
+            font-family: var(--heading-font);
+		    font-weight: var(--heading-fw);
+            position: relative;
+            &::after, &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 90vw;
+                height: .5rem;
+                top: 50%;
+                background-color: var(--color-text-light);
+                transform: translateY(-45%);
+            }
+            &::after{
+                right: 100%;
+                transform: translateX(-4%)
+
+            }
+            &::before{
+                left: 100%;
+                transform: translateX(4%)
+
+            }
+        }
+    }
+</style>

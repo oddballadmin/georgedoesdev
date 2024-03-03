@@ -59,6 +59,9 @@ html,
 
     --hero-sub-min-fs: 1rem;
     --hero-sub-max-fs: 3.5rem;
+
+    --hero-sub-min-fs: 1rem;
+    --hero-sub-max-fs: 3.5rem;
     // End of Font Sizes
 
     // layout vars
@@ -98,7 +101,7 @@ body{
   
 }
 section{
-  min-height: 75vh;
+  min-height: 90svh;
 }
 main p{
   font-size: var(--default-body-fs);
@@ -110,6 +113,9 @@ main p{
   grid-column: breakout;
 }
 .grid-content > .full-width{
+  grid-column: full-width;
+}
+.full-width{
   grid-column: full-width;
 }
 /* // End of Layout container section */

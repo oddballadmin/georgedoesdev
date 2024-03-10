@@ -45,7 +45,7 @@ html,
 
 
     // Font Sizes
-    --body-fs: 2.4rem;
+    --body-fs: 2.25rem;
     --header-fs: 1.5rem;
 
     --section-head-fs: 6.4rem;
@@ -97,14 +97,16 @@ margin-top: 1em;
 body{
   min-height: 100vh;
   font-size: var(--default-body-fs);
-  background: radial-gradient(circle at right bottom, #27273d , #0a0a20)
+  background: radial-gradient(circle at right bottom, #27273d , #0a0a20);
+  color:var(--color-text-light);
   
 }
+
 section{
   min-height: 90svh;
 }
 main p{
-  font-size: var(--default-body-fs);
+  font-size: var(--body-fs);
 }
 .grid-content > *{
   grid-column: content;

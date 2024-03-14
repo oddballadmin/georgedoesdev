@@ -1,0 +1,53 @@
+---
+import SectionHeader from '../components/utils/SectionHeader.astro'
+---
+<section class="about-me">
+    <SectionHeader title="About Me" alignment="left" />
+    <div class="grid-content">
+        <div class="about-box">
+            <p>
+                Hello, I'm a dedicated web developer from the United States,
+                specializing in creating interactive websites and user-friendly web
+                applications. My expertise lies in utilizing cutting-edge frameworks and
+                libraries, notably Astro, HTMX, and React, which enhance my JavaScript
+                development projects.
+                <br />While JavaScript plays a significant role in my development
+                process, my profound interest lies in CSS. I am deeply invested in its
+                ongoing evolution and the adoption of its latest features by various web
+                browsers. This passion for CSS not only drives me to stay ahead in the
+                field but also inspires me to craft visually compelling and technically
+                robust designs. My work reflects a commitment to both aesthetic
+                excellence and functional innovation in web development
+            </p>
+            <div class="cert-display">
+                <p>AA - Information Systems Technology</p>
+                <p>BS - Information Systems Technology</p>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .about-box{
+		display: grid;
+		grid-template-columns: 1fr .75fr;
+		gap: 2rem;
+		
+	}
+	.cert-display{
+		display: grid;
+		border: 1.5px solid var(--color-text-light);
+		align-items: center;
+		height: 20rem;
+		text-align: center;
+
+	}
+	@media screen and (max-width: 768px){
+		.about-box{
+			grid-template-columns: 1fr;
+		}
+		.cert-display{
+			max-height: auto
+		}
+		
+	}
+</style>

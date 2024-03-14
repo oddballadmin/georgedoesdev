@@ -44,7 +44,7 @@ html,
     // End of Fonts
 
 
-    // Font Sizes
+    // Font Sizes 
     --body-fs: 2.25rem;
     --header-fs: 1.5rem;
 
@@ -99,6 +99,7 @@ body{
   font-size: var(--default-body-fs);
   background: radial-gradient(circle at right bottom, #27273d , #0a0a20);
   color:var(--color-text-light);
+  overflow-x: hidden;
   
 }
 

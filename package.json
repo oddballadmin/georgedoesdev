@@ -12,14 +12,19 @@
   "dependencies": {
     "@astrojs/check": "^0.4.1",
     "@astrojs/mdx": "^2.0.4",
+    "@astrojs/react": "^3.0.10",
     "@astrojs/rss": "^4.0.2",
     "@astrojs/sitemap": "^3.0.4",
     "@iconify-json/bxl": "^1.1.10",
     "@iconify-json/ic": "^1.1.17",
     "@iconify-json/line-md": "^1.1.36",
     "@iconify-json/mdi": "^1.1.64",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
     "astro": "^4.1.2",
     "astro-icon": "^1.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.69.7",
     "typescript": "^5.3.3"
   }

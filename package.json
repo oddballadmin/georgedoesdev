@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "concurrently \"nodemon server/server.js\" \"astro dev\"",
+    "start:backend": "nodemon server/server.js",
+    "start:frontend": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
@@ -23,9 +25,16 @@
     "@types/react-dom": "^18.2.21",
     "astro": "^4.1.2",
     "astro-icon": "^1.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
     "sass": "^1.69.7",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.0"
   }
 }

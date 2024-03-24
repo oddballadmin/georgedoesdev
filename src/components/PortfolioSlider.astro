@@ -1,12 +1,13 @@
 ---
 import SectionHeader from '../components/utils/SectionHeader.astro'
-import {Slider} from '../components/react/Slider'
+import {App} from './react/App'
 
 ---
 <section class="portfolio">
     <SectionHeader title="Portfolio" alignment="right"/>
     <div class="portfolio">
-        <Slider client:load/>
+        <App client:load/>
     </div>
 </section>
 
+./react/App

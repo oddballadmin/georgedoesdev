@@ -126,6 +126,9 @@ main p{
 .active{
   display: flex !important;
 }
+.relative{
+  position: relative;
+}
 .sr-only {
     border: 0;
     padding: 0;

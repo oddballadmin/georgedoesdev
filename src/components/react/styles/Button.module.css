@@ -1,0 +1,14 @@
+.button{
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 5rem;
+    background: black;
+    z-index: 100;
+}
+.buttonLeft{
+    left: 0;
+}
+.buttonRight{
+    right: 0;
+}

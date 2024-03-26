@@ -1,0 +1,13 @@
+.sliderContainer{
+    display: flex;
+    position: relative;
+    height: 50rem;
+    flex-flow: row nowrap;
+    background: red;
+}
+.slide-item{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    position: relative;
+}

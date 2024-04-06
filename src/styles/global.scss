@@ -3,7 +3,7 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-html{
+html {
   font-size: 62.5%;
   line-height: 2;
 
@@ -11,138 +11,149 @@ html{
 
 html,
 * {
-    box-sizing: border-box; 
-    margin: 0;
-    padding: 0;
-    
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
 }
- 
+
 :root {
-	// Colors
+  // Colors
   --color-darkblue-bg: #121218;
   --color-darkbluegray-bg: #27273D;
   --color-lightbluegray-bg: #4c4c67;
   --color-text-light: #f7f7f7;
-  --text-gradient: linear-gradient(to top, rgba(39,39,61,1) 2.5%, rgba(247,247,247,1) 50%);
-  --body-gradient: radial-gradient(to top,rgb(39, 39, 61) 90% , rgba(1, 1, 1, 0.5) 100% );
-  
+  --text-gradient: linear-gradient(to top, rgba(39, 39, 61, 1) 2.5%, rgba(247, 247, 247, 1) 50%);
+  --body-gradient: radial-gradient(to top, rgb(39, 39, 61) 90%, rgba(1, 1, 1, 0.5) 100%);
 
-  
+
+
   // End Of Colors
 
 
 
-    // Fonts
-    --heading-font: 'Oswald', sans-serif;
-    --heading-fw: 600;
-    --sub-heading-fw: 300;
-    --body-font: 'Roboto', sans-serif;
-    --body-fw: 500;
-    
+  // Fonts
+  --heading-font: 'Oswald', sans-serif;
+  --heading-fw: 600;
+  --sub-heading-fw: 300;
+  --body-font: 'Roboto', sans-serif;
+  --body-fw: 500;
 
 
-    // End of Fonts
+
+  // End of Fonts
 
 
-    // Font Sizes 
-    --body-fs: 2.25rem;
-    --header-fs: 1.5rem;
+  // Font Sizes 
+  --body-fs: 2rem;
+  --header-fs: 1.5rem;
 
-    --section-head-fs: 6.4rem;
-    --sub-head-fs: 4.2rem;
-    --project-title-fs: 4.8rem;
-    --small-tag-fs: 2.0rem;
-    --footer-brand-fs: 2.8rem;
-    --social-fs: 3rem;
-    --hero-min-fs: 3.35rem;
-    --hero-max-fs: 7.4rem;
+  --section-head-fs: 6.4rem;
+  --sub-head-fs: 4.2rem;
+  --project-title-fs: 4.8rem;
+  --small-tag-fs: 2.0rem;
+  --footer-brand-fs: 2.8rem;
+  --social-fs: 3rem;
+  --hero-min-fs: 3.35rem;
+  --hero-max-fs: 7.4rem;
 
-    --hero-sub-min-fs: 1rem;
-    --hero-sub-max-fs: 3.5rem;
+  --hero-sub-min-fs: 1rem;
+  --hero-sub-max-fs: 3.5rem;
 
-    --hero-sub-min-fs: 1rem;
-    --hero-sub-max-fs: 3.5rem;
-    // End of Font Sizes
+  --hero-sub-min-fs: 1rem;
+  --hero-sub-max-fs: 3.5rem;
+  // End of Font Sizes
 
-    // layout vars
-    --content-size: min(100% - (var(--padding-inline) * 2),
-            var(--content-max-width));
-    --padding-inline: 1.25rem;
-    --content-max-width: 200ch;
-    --breakout-max-width: 300ch; 
-    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
-    --grid-column-width: min(100% - (var(--padding-inline) * 2),calc((var(--content-max-width) / 2) - var(--padding-inline)*2 ));
-    // End of layout vars
+  // layout vars
+  --content-size: min(100% - (var(--padding-inline) * 2),
+      var(--content-max-width));
+  --padding-inline: 1.25rem;
+  --content-max-width: 200ch;
+  --breakout-max-width: 300ch;
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+  --grid-column-width: min(100% - (var(--padding-inline) * 2), calc((var(--content-max-width) / 2) - var(--padding-inline)*2));
+  // End of layout vars
 }
-.flow > *+*{
-margin-top: 1em;
+
+.flow>*+* {
+  margin-top: 1em;
 }
+
 /* // Layout container section */
 
 .grid-content,
 .full-width {
-    
-    display: grid;
 
-    grid-template-columns:
-        [full-width-start] minmax(var(--padding-inline), 1fr) 
-        [breakout-start] minmax(0, var(--breakout-size)) 
-        [content-start] var(--content-size) 
-        [content-end] minmax(0, var(--breakout-size)) 
-        [breakout-end] minmax(var(--padding-inline),
-            1fr) 
-        [full-width-end];
+  display: grid;
+
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] var(--content-size) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline),
+      1fr) [full-width-end];
 
 }
-body{
+
+body {
   min-height: 100vh;
   font-size: var(--default-body-fs);
-  background: radial-gradient(circle at right bottom, #27273d , #0a0a20);
-  color:var(--color-text-light);
+  background: radial-gradient(circle at right bottom, #2b2b3f, #27273d, #111120, #0a0a20);
+  color: var(--color-text-light);
   overflow-x: hidden;
-  
+
 }
 
-section{
+main {
+  overflow-x: hidden;
+}
+
+section {
   min-height: 90svh;
 }
-main p{
+
+main p {
   font-size: var(--body-fs);
+  color: #f7f7f7;
 }
-.grid-content > *{
+
+.grid-content>* {
   grid-column: content;
 }
-.grid-content > .breakout{
+
+.grid-content>.breakout {
   grid-column: breakout;
 }
-.grid-content > .full-width{
+
+.grid-content>.full-width {
   grid-column: full-width;
 }
-.full-width{
+
+.full-width {
   grid-column: full-width;
 }
+
 /* // End of Layout container section */
 
-.active{
+.active {
   display: flex !important;
 }
-.relative{
+
+.relative {
   position: relative;
 }
+
 .sr-only {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-    clip: rect(1px 1px 1px 1px);
-    /* maybe deprecated but we need to support legacy browsers */
-    clip: rect(1px, 1px, 1px, 1px);
-    /* modern browsers, clip-path works inwards from each corner */
-    clip-path: inset(50%);
-    /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
-    white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(1px 1px 1px 1px);
+  /* maybe deprecated but we need to support legacy browsers */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* modern browsers, clip-path works inwards from each corner */
+  clip-path: inset(50%);
+  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+  white-space: nowrap;
 }

@@ -1,14 +1,27 @@
-.button{
-    display: block;
-    position: absolute;
-    top: 50%;
-    width: 5rem;
-    background: black;
-    z-index: 100;
+.button {
+	all: unset;
+	display: flex;
+	position: absolute;
+	top: 50%;
+	width: 5rem;
+	height: 5rem;
+	z-index: 100;
+	background-color: none;
+	color: #fff;
+	justify-content: center;
+	align-items: center;
 }
-.buttonLeft{
-    left: 0;
+.buttonLeft {
+	left: 0;
 }
-.buttonRight{
-    right: 0;
+.buttonRight {
+	right: 0;
+}
+svg {
+	fill: #f7f7f7;
+	width: 100%;
+	height: 100%;
+	opacity: 0.75;
+	margin: 0;
+	padding: 0;
 }
